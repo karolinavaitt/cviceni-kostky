@@ -1,5 +1,11 @@
-const roll = () => {
-  return Math.floor(Math.random() * 6) + 1;
-};
+import { Dice } from "./Dice/index.js";
 
-console.log('funguju!');
+const diceRow = document.querySelector("#dice-row");
+diceRow.append(
+  Dice({ side: "1" }),
+  Dice({ side: "2" }),
+  Dice({ side: "3" }),
+  Dice({ side: "4" }),
+  Dice({ side: "5" }),
+  Dice({ side: "6" })
+);
